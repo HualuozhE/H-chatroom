@@ -1,18 +1,18 @@
 <template>
 <div>
-  <router-link tag="p" to="/screen" class="btn">去吧</router-link>
+  <login-box></login-box>
 </div>
 </template>
 
 <script>
+import LoginBox from './components/LoginBox'
 export default {
-  name: 'Login'
+  name: 'Login',
+  components: {
+    LoginBox
+  }
 }
 </script>
 
 <style lang="less" scoped>
-.btn {
-  text-align: center;
-  line-height: 5rem;
-}
 </style>
