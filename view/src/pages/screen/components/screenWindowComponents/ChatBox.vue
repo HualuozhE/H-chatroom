@@ -6,7 +6,7 @@
   </div>
   <div class="msg-box">
     <div class="avatar" :style="rightStyles">
-      <img src="http://5b0988e595225.cdn.sohucs.com/images/20171203/db71e46ef9914a7c9695d45dd0401cb1.jpeg" class="avatar-img">
+      <img src="https://5b0988e595225.cdn.sohucs.com/images/20171203/db71e46ef9914a7c9695d45dd0401cb1.jpeg" class="avatar-img">
     </div>
 
     <div class="message-area" :style="rightStyles">

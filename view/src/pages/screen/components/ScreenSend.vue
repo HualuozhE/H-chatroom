@@ -2,12 +2,13 @@
 <div class="send-container">
   <div class="send-area">
     <textarea class="msg-input" v-model="inputText"></textarea>
-    <div :class="['send-btn', sendBtnActive]">发送</div>
+    <div :class="['send-btn', sendBtnActive]" @click="clickHandle">发送</div>
   </div>
 </div>
 </template>
 
 <script>
+import axios from 'axios'
 
 export default {
   name: 'ScreenSend',
@@ -17,6 +18,13 @@ export default {
       sendBtnActive: {
         active: false
       }
+    }
+  },
+  methods: {
+    clickHandle () {
+      if (!this.sendBtnActive.active) return false
+      axios.post('/api/push', { content: this.inputText })
+      this.inputText = ''
     }
   },
   watch: {

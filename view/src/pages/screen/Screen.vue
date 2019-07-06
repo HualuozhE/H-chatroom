@@ -10,12 +10,18 @@
 import ScreenHeader from './components/ScreenHeader'
 import ScreenWindow from './components/ScreenWindow'
 import ScreenSend from './components/ScreenSend'
+import getCookie from '@/common/cookie'
 export default {
   name: 'Screen',
   components: {
     ScreenHeader,
     ScreenWindow,
     ScreenSend
+  },
+  beforeCreate () {
+    if (!getCookie().id) {
+      this.$router.push('/')
+    }
   }
 }
 </script>
